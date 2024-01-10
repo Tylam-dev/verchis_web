@@ -324,3 +324,76 @@ h1,h2,p{
     background-color: #B7B7B7;
     height: 1.5px;
 }
+
+
+
+.section_about_us{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_about_us_division{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.section_about_us_division_line{
+    width: 85%;
+    background-color: #B7B7B7;
+    height: 1.5px;
+}
+
+.section_about_us_background1{
+    width: 100vw;
+    height: 200px;
+    background-image:url('./assets/Diseño_verde.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.section_about_us_background2{
+    width: 100vw;
+    height: 200px;
+    background-image:url('./assets/Diseño_amarillo.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+}
+.section_about_us_background3{
+    width: 100vw;
+    height: 200px;
+    background-image:url('./assets/Diseño_marron.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.division_3{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.division_3_line{
+    width: 85%;
+    background-color: #B7B7B7;
+    height: 1.5px;
+}
