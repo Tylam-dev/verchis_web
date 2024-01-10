@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 75px; 
+}
+
+.navbar_lines{
+    margin-left: 15px;
+    width: 60px;
+    height: 60px;
+}
+.navbar_logo{
+    width: 85px;
+    height: 70px;
+}
+.navbar_div{
+    height: 100%;
+    width: 20%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar_div_moonicon{
+    width: 24px;
+    height: 24px;
+}
+.navbar_div_languageicon{
+    width: 24px;
+    height: 24px;
+}
