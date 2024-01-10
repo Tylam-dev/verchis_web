@@ -397,3 +397,20 @@ h1,h2,p{
     background-color: #B7B7B7;
     height: 1.5px;
 }
+.section_gallery_container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.section_gallery_container_title{
+    color: #585858;
+    margin-left: 35px;
+}
+
+.section_gallery_container_arrow{
+    width: 20px;
+    height: 20px;
+    margin-right: 35px;
+}
