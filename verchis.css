@@ -49,6 +49,9 @@ h1,h2,p{
     width: 24px;
     height: 24px;
 }
+.navbar_div_moonicon:hover{
+    fill: black;
+}
 .navbar_div_sunicon{
     width: 24px;
     height: 24px;
@@ -148,7 +151,7 @@ h1,h2,p{
 }
 
 .section_news{
-    padding-top: 75px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
 }
@@ -157,6 +160,7 @@ h1,h2,p{
     margin-left: 35px;
     color: #585858;
     font-weight: 800;
+    margin-bottom: 10px;
 }
 
 .section_news_newscontainer{
@@ -167,14 +171,17 @@ h1,h2,p{
 }
 
 .section_news_newscontainer_arrow_left{
+    display: none;
     width: 24px;
     height: 24px;
 }
 .section_news_newscontainer_arrow_right{
+    display: none;
     width: 24px;
     height: 24px;
 }
 .section_news_newscontainer_contentcontainer{
+    width: 100%;
     height: 100%;
 }
 .section_news_newscontainer_contentcontainer_imgcontainer{
@@ -182,8 +189,8 @@ h1,h2,p{
     flex-direction: column;
 }
 .section_news_newscontainer_contentcontainer_imgcontainer_img{
-    width: 363px;
-    height: 173px;
+    width: 100%;
+    height: 100%;
 }
 
 .section_news_newscontainer_contentcontainer_imgcontainer_description{
@@ -191,7 +198,7 @@ h1,h2,p{
     color: white;
     font-size: 9px;
     font-weight: bold;
-    width: 363px;
+    width: 100%;
 }
 
 .section_news_selection_div{
@@ -615,10 +622,10 @@ h1,h2,p{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        width: 75%;
     }
     .section_video_background_video_container_video{
-        width: 80%;
+        width: 95%;
     }
     .section_video_background_welcome_container{
         display: flex;
@@ -632,7 +639,7 @@ h1,h2,p{
         position:absolute;
         border-radius: 100%;
         top: 23%;
-        right: 21.5%;
+        right: 16.4%;
         width: 180px;
         height: 180px;
     }
@@ -700,5 +707,87 @@ h1,h2,p{
     .language_container_text_container{
         font-size: 15px;
         font-weight: 800;
+    }
+    .section_news{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .section_news_title{
+        font-size: 48px;
+        margin-left: 35px;
+        color: #585858;
+        font-weight: 800;
+    }
+    .section_news_newscontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .section_news_newscontainer_arrow_left{
+        display: block;
+        width: 94px;
+        height: 94px;
+    }
+    .section_news_newscontainer_arrow_right{
+        display: block;
+        width: 94px;
+        height: 94px;
+    }
+    .section_news_newscontainer_contentcontainer{
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .section_news_newscontainer_contentcontainer_imgcontainer{
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .section_news_newscontainer_contentcontainer_imgcontainer_img{
+        width: 572px;
+        height: 365px;
+    }
+    .section_news_newscontainer_contentcontainer_imgcontainer_description{
+        align-self: center;
+        background-color: rgba( 0, 0, 0, 0);
+        color: #B7B7B7;
+        font-size: 40px;
+        font-weight: bold;
+        width: 30%;
+    }
+    
+    .section_news_selection_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+    }
+    
+    .section_news_selection_div_option_1{
+        width: 20px;
+        height: 20px;
+        background-color: #D9D9D9;
+        border-radius: 100%;
+    }
+    .section_news_selection_div_option_2{
+        width: 20px;
+        height: 20px;
+        background-color: #AAAAAA;
+        border-radius: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .section_news_selection_div_option_3{
+        width: 20px;
+        height: 20px;
+        background-color: #D9D9D9;
+        border-radius: 100%;
     }
 }
