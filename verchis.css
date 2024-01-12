@@ -379,13 +379,16 @@ h1,h2,p{
     width: 50%;
     height: 100%;
 }
+.section_products_container_product2_description_name{
+    display: none;
+}
 .section_products_container_product2_descriptioncontainer_description{
     color: #8C8C8C;
     font-size: 12px;
     font-weight: 200;
     width: 184px;
 }
-.section_products_container1_descriptioncontainer_details{
+.section_products_container_product2_descriptioncontainer_details{
     color: #585858;
     font-size: 12px;
     font-weight: 400;
@@ -434,9 +437,10 @@ h1,h2,p{
     height: 1.5px;
 }
 
-
-
 .section_about_us{
+    width: 100%;
+}
+.section_about_us_container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -468,7 +472,9 @@ h1,h2,p{
     flex-direction: column;
     color: white;
 }
-
+.section_about_us_background1_image{
+    display: none;
+}
 .section_about_us_background2{
     width: 100%;
     height: 200px;
@@ -505,6 +511,9 @@ h1,h2,p{
     width: 85%;
     background-color: #B7B7B7;
     height: 1.5px;
+}
+.section_about_us_selection_div{
+    display: none;
 }
 .section_gallery_container{
     width: 100%;
@@ -678,9 +687,6 @@ h1,h2,p{
         fill: white;
     }
     .division_0_1{
-        display: flex;
-        justify-content: center;
-        width: 100%;
         margin-top: 50px;
         margin-bottom: 25px;
     }
@@ -787,6 +793,17 @@ h1,h2,p{
         width: 20px;
         height: 20px;
     }
+
+    .division_1_2{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .division_1_2_line{
+        width: 85%;
+        background-color: #B7B7B7;
+        height: 1.5px;
+    }
+
     .section_products{
         display: flex;
         flex-direction: column;
@@ -995,6 +1012,103 @@ h1,h2,p{
         width: 20px;
         height: 20px;
         background-color: #D9D9D9;
+        border-radius: 100%;
+    }
+    .division_2_3{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .division_2_3_line{
+        width: 85%;
+        background-color: #B7B7B7;
+        height: 1.5px;
+    }
+    .section_about_us{
+        width: 100%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+    .section_about_us_container{
+        display:flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        overscroll-behavior-x: smooth;
+    }
+    .section_about_us_division{
+        display: none;
+    }
+    .section_about_us_background1,
+    .section_about_us_background2,
+    .section_about_us_background3{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .section_about_us_background1_image,
+    .section_about_us_background2_image,
+    .section_about_us_background3_image{
+        display: block;
+        background-color: gray;
+        width: 100%;
+        height: 100%;
+    }
+    .section_about_us_background1_textcontainer,
+    .section_about_us_background2_textcontainer,
+    .section_about_us_background3_textcontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .section_about_us_background1_title,
+    .section_about_us_background2_title,
+    .section_about_us_background3_title{
+        font-size: 40px;
+    }
+    .section_about_us_background1_description,
+    .section_about_us_background2_description,
+    .section_about_us_background3_description{
+        font-size: 30px;
+        width: 75%;
+    }
+    .division_3{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .section_about_us_selection_div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        margin-top: 25px;
+    }
+    .section_about_us_selection_div_option_1{
+        background-color: gray;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+    }
+    .section_about_us_selection_div_option_2{
+        background-color: gray;
+        height: 20px;
+        width: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        border-radius: 100%;
+    }
+    .section_about_us_selection_div_option_3{
+        background-color: gray;
+        height: 20px;
+        width: 20px;
         border-radius: 100%;
     }
 }
