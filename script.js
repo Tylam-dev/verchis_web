@@ -52,6 +52,20 @@ const section_products_container_product2_imgcontainer_elemenstcontainer_arrow_r
 const section_products_product2_selection_div_option_1 = document.querySelector('.section_products_product2_selection_div_option_1')
 const section_products_product2_selection_div_option_2 = document.querySelector('.section_products_product2_selection_div_option_2')
 const section_products_product2_selection_div_option_3 = document.querySelector('.section_products_product2_selection_div_option_3')
+//About us section variables 
+const section_about_us_container = document.querySelector('.section_about_us_container')
+const section_about_us_selection_div_option_1 = document.querySelector('.section_about_us_selection_div_option_1')
+const section_about_us_selection_div_option_2 = document.querySelector('.section_about_us_selection_div_option_2')
+const section_about_us_selection_div_option_3 = document.querySelector('.section_about_us_selection_div_option_3')
+//Gallery section variables
+const section_gallery_imgcontainer_img1container_img = document.querySelector('.section_gallery_imgcontainer_img1container_img')
+const section_gallery_imgcontainer_img2container_img = document.querySelector('.section_gallery_imgcontainer_img2container_img')
+const section_gallery_imgcontainer_img3container_img = document.querySelector('.section_gallery_imgcontainer_img3container_img')
+const section_gallery_imgcontainer_img4container_img = document.querySelector('.section_gallery_imgcontainer_img4container_img')
+//Visualitation variables
+const background_visualization = document.querySelector('.background_visualization')
+const background_visualization_img = document.querySelector('.background_visualization_img')
+const background_visualization_close = document.querySelector('.background_visualization_close')
 //Observers function
 function observerCreator (section){
     const section_news_observer = new IntersectionObserver(entries => {
@@ -85,6 +99,19 @@ menu_container_text_container.forEach(element => element.addEventListener('click
 
 function setLanguage(language){
     //The webpage load in Spanish for default
+    section_news_newscontainer_contentcontainer_imgcontainer_img1.src = images.news_images[1]
+    section_news_newscontainer_contentcontainer_imgcontainer_img2.src = images.news_images[2]
+    section_news_newscontainer_contentcontainer_imgcontainer_img3.src = images.news_images[3]
+    section_products_container_product1_imgcontainer_elemenstcontainer_img1.src = images.product1_images[1]
+    section_products_container_product1_imgcontainer_elemenstcontainer_img2.src = images.product1_images[2]
+    section_products_container_product1_imgcontainer_elemenstcontainer_img3.src = images.product1_images[3]
+    section_products_container_product2_imgcontainer_elemenstcontainer_img1.src = images.product2_images[1]
+    section_products_container_product2_imgcontainer_elemenstcontainer_img2.src = images.product2_images[2]
+    section_products_container_product2_imgcontainer_elemenstcontainer_img3.src = images.product2_images[3]
+    section_gallery_imgcontainer_img1container_img.src = images.gallery_images[1]
+    section_gallery_imgcontainer_img2container_img.src = images.gallery_images[2]
+    section_gallery_imgcontainer_img3container_img.src = images.gallery_images[3]
+    section_gallery_imgcontainer_img4container_img.src = images.gallery_images[4]
     section_news_newscontainer_contentcontainer_imgcontainer_description1.textContent = `${language.newsDescription[1]}`
     section_news_newscontainer_contentcontainer_imgcontainer_description2.textContent = `${language.newsDescription[2]}`
     section_news_newscontainer_contentcontainer_imgcontainer_description3.textContent = `${language.newsDescription[3]}`
@@ -297,6 +324,62 @@ function setLanguage(language){
         })
     }
     products2Change()
-
+    function aboutusChange(){
+        let newSection = 1 
+        function setSection(){
+            if(newSection == 1){
+                section_about_us_container.scrollTo({
+                    left: window.innerWidth,
+                    behavior: 'smooth'
+                })
+                section_about_us_selection_div_option_1.classList.remove('selection_green')
+                section_about_us_selection_div_option_2.classList.add('selection_yellow')
+                nextSection()
+            }else if(newSection == 2){
+                section_about_us_container.scrollTo({
+                    left: window.innerWidth * 2,
+                    behavior: 'smooth'
+                })
+                section_about_us_selection_div_option_2.classList.remove('selection_yellow')
+                section_about_us_selection_div_option_3.classList.add('selection_peach')
+                nextSection()
+            } else if(newSection == 3){
+                section_about_us_container.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                })
+                section_about_us_selection_div_option_1.classList.add('selection_green')
+                section_about_us_selection_div_option_3.classList.remove('selection_peach')
+                nextSection()
+            }
+        }
+        function nextSection(){
+            if(newSection == 1){
+                newSection += 1
+            }else if(newSection == 2){
+                newSection += 1
+            } else if(newSection == 3){
+                newSection = 1
+            }
+        }
+        setSection()
+        const interval_aboutus = setInterval(setSection, 10000)    
+    }
+    aboutusChange()
+    function galleryPicturePreview(picture){
+        background_visualization.style.display = 'flex'
+        background_visualization_img.src = picture
+        body.style.overflowY = 'hidden'
+        console.log(picture)
+    }
+    section_gallery_imgcontainer_img1container_img.addEventListener('click',function(){galleryPicturePreview(images.gallery_images[1])})
+    section_gallery_imgcontainer_img2container_img.addEventListener('click',function(){galleryPicturePreview(images.gallery_images[2])})
+    section_gallery_imgcontainer_img3container_img.addEventListener('click',function(){galleryPicturePreview(images.gallery_images[3])})
+    section_gallery_imgcontainer_img4container_img.addEventListener('click',function(){galleryPicturePreview(images.gallery_images[4])})
+    function closePicturePreview(){
+        background_visualization.style.display = 'none'
+        body.style.overflowY = 'auto'
+    }
+    background_visualization_close.addEventListener('click',closePicturePreview)
 }
 setLanguage(languages.espaniol)
