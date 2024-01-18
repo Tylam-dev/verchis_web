@@ -4,7 +4,14 @@ const section_products_container_product1 = document.querySelector('.section_pro
 const section_products_container_product2 = document.querySelector('.section_products_container_product2')
 const section_about_us = document.querySelector('.section_about_us')
 const section_gallery = document.querySelector('.section_gallery')
+const section_contact = document.querySelector('.section_contact')
+//menu variables
+const menu_container_text_container_product = document.querySelector('.menu_container_text_container_product')
 const menu = document.querySelector('.menu')
+const menu_container_text_container_news = document.querySelector('.menu_container_text_container_news')
+const menu_container_text_container_about_us = document.querySelector('.menu_container_text_container_about_us')
+const menu_container_text_container_gallery = document.querySelector('.menu_container_text_container_gallery')
+const menu_container_text_container_contacts = document.querySelector('.menu_container_text_container_contacts')
 //Nav bar variables
 const navbar_lines = document.querySelector('.navbar_lines')
 const menu_container_text_container = document.querySelectorAll('.menu_container_text_container')
@@ -17,6 +24,7 @@ const section_news_newscontainer_contentcontainer_imgcontainer_description2 = do
 const section_news_newscontainer_contentcontainer_imgcontainer_description3 = document.querySelector('.section_news_newscontainer_contentcontainer_imgcontainer_description3')
 const section_news_newscontainer_arrow_left = document.querySelector('.section_news_newscontainer_arrow_left')
 const section_news_newscontainer_arrow_right = document.querySelector('.section_news_newscontainer_arrow_right')
+const section_news_selection_div = document.querySelector('.section_news_selection_div')
 const section_news_selection_div_option_1 = document.querySelector('.section_news_selection_div_option_1')
 const section_news_selection_div_option_2 = document.querySelector('.section_news_selection_div_option_2')
 const section_news_selection_div_option_3 = document.querySelector('.section_news_selection_div_option_3')
@@ -85,17 +93,34 @@ observerCreator(section_products_container_product2)
 observerCreator(section_about_us)
 observerCreator(section_gallery)
 
-navbar_lines.addEventListener('click', function(){
+function menuOpened(){
     body.classList.toggle('stick')
     menu.classList.toggle('hide')
+}
+navbar_lines.addEventListener('click', menuOpened)
+
+menu_container_text_container.forEach(element => element.addEventListener('click',menuOpened))
+
+menu_container_text_container_product.addEventListener('click', function(){
+    section_news_selection_div.scrollIntoView()
+    menuOpened()
 })
-
-menu_container_text_container.forEach(element => element.addEventListener('click',function(){
-    body.classList.toggle('stick')
-    menu.classList.toggle('hide')
-    console.log('cambio')
-}))
-
+menu_container_text_container_news.addEventListener('click', function(){
+    section_news.scrollIntoView()
+    menuOpened()
+})
+menu_container_text_container_about_us.addEventListener('click', function(){
+    section_about_us.scrollIntoView()
+    menuOpened()
+})
+menu_container_text_container_gallery.addEventListener('click', function(){
+    section_gallery.scrollIntoView()
+    menuOpened()
+})
+menu_container_text_container_contacts.addEventListener('click', function(){
+    section_contact.scrollIntoView()
+    menuOpened()
+})
 
 function setLanguage(language){
     //The webpage load in Spanish for default

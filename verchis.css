@@ -85,21 +85,19 @@ h1,h2,p{
     padding-top: 50px;
     justify-content: space-around;
 }
-
-.menu_container_text_container{
+.menu_container_text_container_news,
+.menu_container_text_container_product,
+.menu_container_text_container_about_us,
+.menu_container_text_container_gallery,
+.menu_container_text_container_contacts{
+    display: flex;
     width: 100%;
     height: 100%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     font-size: 25px;
     font-weight: 800;
-}
-
-.menu_container_text_container,
-.menu_container_text_container:link,
-.menu_container_text_container:visited,
-.menu_container_text_container:hover,
-.menu_container_text_container:active{
-    text-decoration: none;
     color: #424242;
 }
 
