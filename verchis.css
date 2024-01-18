@@ -518,7 +518,7 @@ h1,h2,p{
 .section_about_us_background1{
     width: 100%;
     height: 200px;
-    background-image:url('./assets/Diseño_verde.jpg');
+    background-image:url("./assets/Diseño_verde.jpg");
     background-size: 100% 100%;
     text-align: center;
     display: flex;
